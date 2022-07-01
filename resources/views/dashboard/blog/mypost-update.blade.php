@@ -56,8 +56,8 @@
                             </div>
                         </div>
                         <div  class="p-3">
-                            <input id="content" type="hidden" name="content">
-                            <trix-editor input="content" name="content" placeholder="Content">{{strip_tags (old('content',$post->content))}}</trix-editor>
+                            <input id="content" type="hidden" name="content" value="{{$post->content}}">
+                            <trix-editor input="content" name="content" placeholder="Content"></trix-editor>
                             @error('content')
                             <div class="text-danger">
                                 <small>{{$message}}</small>
